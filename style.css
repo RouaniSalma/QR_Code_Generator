@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppings', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #1c263b;
+}
+.container {
+ width: 400px;
+ padding: 25px 35px;
+ background: #82838f ;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ border-radius: 10px;
+}
+.container p{
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.container input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #27262f;
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+}
+.container Button{
+    width: 100%;
+    height: 50px;
+    background: #2b2869;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    margin: 20px 0 ;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#imgBox{
+    width: 200px;
+    max-height: 0;
+    /*Cache tout ce qui dépasse les limites du conteneur*/
+    overflow: hidden;
+    border-radius: 5px;
+    /*la hauteur du conteneur augmente de manière fluide,*/
+    transition: max-height 1s;
+}
+#imgBox img{
+    width: 100%;
+   padding: 10px;
+}
+#imgBox.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid rgb(209, 209, 209);
+}
+/*définit une animation de type "shake" (tremblement) sur le chp de texte*/
+.error{
+    /*les caracteristiques de cette animation*/
+    animation: shake 0.1s linear 10;
+ }
+ /*L'animation shake utilise la propriété transform: translate(x, y); pour créer un effet de déplacement horizontal.*/
+ @keyframes shake{
+    0%{
+        transform: translate(0);
+     }
+     25%{
+        transform: translate(-2px);
+     } 
+     75%{
+        transform: translate(2px);
+     }
+     100%{
+        transform: translate(0);
+     }
+ }
+
+ 
+ 
